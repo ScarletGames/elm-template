@@ -1,0 +1,35 @@
+{
+  "name": "TODO:",
+  "version": "0.0.1",
+  "description": "TODO: description",
+  "main": "src/Main.elm",
+  "repository": "git@github.com:ScarletGames/TODO:.git",
+  "author": "BreadGames",
+  "private": false,
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "cross-env WEBPACK_ENV=dev webpack-dev-server",
+    "build": "yarn build:prod",
+    "build:prod": "cross-env WEBPACK_ENV=prod webpack",
+    "test": "elm-test",
+    "lint": "yarn lint:elm && yarn lint:js",
+    "lint:elm": "elm-format src/ --validate",
+    "lint:js": "standard \"./**/*.js\"",
+    "format": "elm-format src/"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "elm": "^0.18.0",
+    "elm-format": "^0.6.1-alpha",
+    "elm-test": "^0.18.12",
+    "elm-webpack-loader": "^4.5.0",
+    "html-webpack-plugin": "^3.2.0",
+    "standard": "^11.0.1",
+    "standard-loader": "^6.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
+  }
+}
